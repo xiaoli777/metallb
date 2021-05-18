@@ -1,0 +1,9 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  namespace: metallb-system
+spec:
+  backend:
+    serviceName: nginx-svc
+    servicePort: 80
